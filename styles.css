@@ -1,0 +1,394 @@
+/* Theme tokens + Global styles ---------------------------------- */
+:root {
+  --blue-50: #f3f8ff;
+  /* very light background */
+  --blue-100: #e6f0ff;
+  /* page subtle tone */
+  --blue-200: #cfe6ff;
+  --blue-300: #a6d2ff;
+  --blue-400: #6fb2ff;
+  --blue-500: #2f8eff;
+  /* primary */
+  --blue-600: #0b64d6;
+  /* strong */
+  --blue-700: #094fae;
+  /* darker */
+  --text-navy: #0b2540;
+  /* primary text */
+  --card-glow: rgba(100, 150, 255, 0.08);
+}
+
+/* Global reset / page background */
+body {
+  margin: 0;
+  font-family: "Geist", Arial, sans-serif;
+  background-color: var(--blue-100);
+  background-size: 60px 60px;
+  color: var(--text-navy);
+}
+
+/* Hero Section (page top) -------------------------------------- */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1240 / 526;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  min-height: 300px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('hero_bg.jpg') center/cover no-repeat;
+  filter: blur(4px) brightness(0.85);
+  transform: scale(1.1);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 10px rgba(100, 150, 255, 0.25);
+  /* layered subtle blue glow */
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin-top: 0.5rem;
+  opacity: 0.95;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4), 0 0 5px rgba(100, 150, 255, 0.15);
+}
+
+/* Header + Navbar with gradient */
+.site-header {
+  background: linear-gradient(to right, var(--blue-600), var(--blue-200));
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  border-bottom: 3px solid transparent; /* keep layout from shifting when active */
+  border-left: 4px solid transparent; /* subtle left accent used for active state */
+}
+
+.nav-link:hover {
+  background: var(--blue-600);
+}
+
+.nav-link.active,
+.nav-link[aria-current="true"] {
+  /* subtle bottom border to indicate active nav link while keeping header background visible */
+  background: transparent;
+  box-shadow: none;
+  border-bottom-color: var(--blue-500);
+  border-left-color: var(--blue-600);
+  box-shadow: 0 6px 20px var(--card-glow), 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  padding-bottom: 0.3rem;
+}
+
+/* Top Statistics Section */
+.statistics-section {
+/* keep top spacing for layout but reduce bottom margin to tighten gap with the following section */
+margin: 4rem 2rem 1rem;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, var(--blue-100), var(--blue-300), var(--blue-500));
+  border-radius: 24px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: var(--text-navy);
+}
+
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+}
+
+.stat-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .statistics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .statistics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Section base style */
+.text-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  margin: 0;
+  border-radius: 12px;
+  background-clip: padding-box;
+}
+
+.text-col {
+  flex: 1;
+}
+
+.text-col h2 {
+  font-family: "Geist", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-navy);
+}
+
+.text-col p {
+  line-height: 1.6;
+  font-size: 1.125rem; /* slightly larger paragraph font for improved readability */
+}
+
+.img-col {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-placeholder {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  background: none;
+  padding: 0;
+  line-height: 0;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.img-note {
+  font-size: 0.85rem;
+  color: rgba(11, 37, 64, 0.65);
+  text-align: center;
+}
+
+/* Alternating backgrounds */
+.odd-section {
+  background-color: var(--blue-200);
+  flex-direction: row;
+}
+
+.even-section {
+  background-color: var(--blue-100);
+  /* Make image left, text right. Source order in HTML places image before text, so keep row. */
+  flex-direction: row;
+}
+
+/* Align text on even sections to the right so the text column appears visually right-justified */
+.even-section .text-col {
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .even-section .text-col {
+    text-align: left;
+  }
+}
+
+/* Image Grid */
+.image-grid-section {
+  padding: 1.5rem 2rem; /* reduce top padding to tighten gap */
+}
+
+.image-grid-section h2, .image-grid-section h3 {
+  font-family: "Geist", sans-serif;
+  color: var(--text-navy);
+  text-align: center;
+}
+
+.image-grid-section h2 { margin-top: 0.25rem; }
+
+.image-grid-section h4 {
+  font-family: "Geist", sans-serif;
+  color: #000000;
+  text-align: center;
+}
+
+.image-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.image-grid .img-placeholder {
+  width: 100%;
+  padding-bottom: 100%;
+  background: var(--blue-200);
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* removed image-grid source notes (text overlay removed) */
+
+/* make inner images cover the grid cell */
+.image-grid .img-placeholder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.image-grid .img-placeholder img {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+}
+
+.image-grid .img-placeholder img.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Did You Know Section */
+.didyouknow-section {
+  margin: 4rem 2rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, var(--blue-100), var(--blue-300), var(--blue-500));
+  border-radius: 24px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  color: var(--text-navy);
+  text-align: center;
+}
+
+.didyouknow-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.didyouknow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fact-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.fact-box:hover {
+  transform: translateY(-4px);
+}
+
+.fact-box .icon {
+  font-size: 2.6rem; /* larger icon container size */
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.fact-box .icon svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  stroke: var(--blue-600);
+  stroke-width: 1.8;
+  vertical-align: middle;
+}
+
+.fact-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.fact-box p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 700px) {
+  .didyouknow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nav-link:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 2px;
+  border-radius: 6px;
+  /* also show the accent borders when focused for keyboard users */
+  border-left-color: var(--blue-600);
+  border-bottom-color: var(--blue-500);
+}

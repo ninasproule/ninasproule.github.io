@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gender Bias in CS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#representation" class="nav-link">Representation</a>
+      <a href="#stereotypes" class="nav-link">Stereotypes</a>
+      <a href="#impact" class="nav-link">Impact</a>
+      <a href="#stats" class="nav-link">Stats</a>
+      <a href="#google" class="nav-link">Search Bias</a>
+      <a href="#ai" class="nav-link">AI Bias</a>
+
+    </nav>
+  </header>
+
+    <!-- Intro Hero Section -->
+    <section class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Gender Bias in Computer Science</h1>
+        <p class="hero-sub">By Nina Sproule</p>
+      </div>
+    </section>
+
+    <!-- Section 1 (odd → pink, text left image right) -->
+    <section id="representation" class="text-section odd-section">
+      <div class="text-col">
+        <h2>What is a Computer Scientist?</h2>
+        <p>When picturing a computer scientist, many imagine a stereotypical "geek" or "nerd" often portrayed in media.
+          These stereotypes often depict computer scientists as socially awkward individuals, typically male, who are
+          deeply engrossed in technology and lack social skills.
+          Such portrayals can influence public perception and deter diverse individuals from pursuing careers in
+          computer science.
+        </p>
+      </div>
+      <div class="img-col">
+        <img src="geeks.jpg" alt="Stereotypical geeks" class="img-placeholder">
+        <p class="img-note">Characters from The Big Bang Theory presenting stereotypical computer geeks.</p>
+      </div>
+    </section>
+
+    <!-- Section 2 (even → white, image left text right) -->
+    <section id="stereotypes" class="text-section even-section">
+      <div class="img-col">
+        <img src="geek_girl.png" alt="Stereotypical geek girl" class="img-placeholder">
+        <p class="img-note">Mia from The Princess Diaries as an example of a shy, geeky girl. She later gets a makeover
+          and removes her glasses to become "beautiful".</p>
+      </div>
+      <div class="text-col">
+        <h2>"Geek Chic" or Harmful Stereotypes?</h2>
+        <p>Similar stereotypes are often applied to women in computer science, portraying them as shy or socially
+          awkward, sometimes emphasizing a deviation from traditional femininity and beauty standards.
+          More often than not, media representations of women in tech highlight their appearance or fashion choices,
+          rather than their skills or accomplishments.
+          These stereotypes can create barriers for women entering the field, as they may feel pressured to conform to
+          certain images or face discrimination based on these preconceived notions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3 (odd → pink, text left image right) -->
+    <section id="impact" class="text-section odd-section">
+      <div class="text-col">
+        <h2>Does it Even Matter?</h2>
+        <p>When immersed in a male dominated environment, attention is inevitable.
+          Whether or not a woman fits in with the stereotype, she will stick out due to the gender minority.
+          Attention given may be positive or negative, but both are unwelcome and unfair.
+          There is no way to be a simple equal coworker. Any accomplishments or mistakes will be attributed to being a
+          woman, rather than just a computer scientist.
+        </p>
+      </div>
+      <div class="img-col">
+        <img src="cigarette_woman.jpg" alt="Woman with many men offering to light her cigarette"
+          class="img-placeholder">
+        <p class="img-note">From the movie Malena. An attractive woman surrounded by overwhelming male attention. </p>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="statistics-section">
+      <h2>The Numbers Tell a Story</h2>
+      <div class="statistics-grid">
+        <div class="stat-box">
+          <h3>27%</h3>
+          <p><strong>Women in Tech</strong><br>Women make up around 27% of the global tech workforce.</p>
+        </div>
+        <div class="stat-box">
+          <h3>22%</h3>
+          <p><strong>CS Graduates</strong><br>Roughly 21–22% of computer science graduates are women.</p>
+        </div>
+        <div class="stat-box">
+          <h3>45%</h3>
+          <p><strong>Higher Attrition</strong><br>Women leave tech at a significantly higher rate than men.</p>
+        </div>
+        <div class="stat-box">
+          <h3>19%</h3>
+          <p><strong>Pay Gap</strong><br>The average wage gap in tech is about 19% in some regions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Grid Section -->
+    <section id="google" class="image-grid-section">
+      <h2>Visual Bias Shown Through Google Images</h2>
+      <h4>Become aware of the implicit bias shown by some of the most accesible and trusted information.
+        <br>How many of these people are white?
+        <br>When a woman makes an appearance, how often is she displaying a stereotype?
+      </h4>
+      <h3>Search: "Programmer"</h3>
+      <div class="image-grid">
+          <div class="img-placeholder">
+            <img src="images/a.jpg" alt="Programmer source A" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/b.jpg" alt="Programmer source B" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/c.jpg" alt="Programmer source C" loading="lazy" />
+          </div>
+      </div>
+      <h3>Search: "Software Developer"</h3>
+      <div class="image-grid">
+          <div class="img-placeholder">
+            <img src="images/d.jpg" alt="Software developer source D" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/e.jpg" alt="Software developer source E" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/f.jpg" alt="Software developer source F" loading="lazy" />
+          </div>
+      </div>
+      <h3>Search: "Tech CEO"</h3>
+      <div class="image-grid">
+          <div class="img-placeholder">
+            <img src="images/g.jpg" alt="Tech CEO source G" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/h.jpg" alt="Tech CEO source H" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/i.jpg" alt="Tech CEO source I" loading="lazy" />
+          </div>
+      </div>
+    </section>
+    <section id="ai" class="image-grid-section">
+      <h2>Visual Bias Shown Through AI Image Generation</h2>
+      <h3>Promt: "Computer Scientist"</h3>
+      <div class="image-grid">
+          <div class="img-placeholder">
+            <img src="images/j.jpg" alt="AI-generated source J" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/k.jpg" alt="AI-generated source K" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/l.jpg" alt="AI-generated source L" loading="lazy" />
+          </div>
+      </div>
+      <h3>Promt: "Programmer"</h3>
+      <div class="image-grid">
+          <div class="img-placeholder">
+            <img src="images/m.jpg" alt="Programmer prompt source M" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/n.jpg" alt="Programmer prompt source N" loading="lazy" />
+          </div>
+          <div class="img-placeholder">
+            <img src="images/o.jpg" alt="Programmer prompt source O" loading="lazy" />
+          </div>
+      </div>
+    </section>
+
+    <!-- Did You Know Section -->
+    <section class="didyouknow-section">
+      <div class="didyouknow-inner">
+        <h2>Computer Science Needs Women!</h2>
+        <div class="didyouknow-grid">
+          <div class="fact-box glass">
+            <i data-lucide="code" class="icon" aria-hidden="true"></i>
+            <h3>Code Quality</h3>
+            <p>Research shows that diverse teams produce better code and more innovative solutions than homogeneous
+              teams.</p>
+          </div>
+
+          <div class="fact-box glass">
+            <i data-lucide="trending-up" class="icon" aria-hidden="true"></i>
+            <h3>Business Impact</h3>
+            <p>Companies with diverse leadership teams are 33% more likely to outperform their peers in profitability.
+            </p>
+          </div>
+
+          <div class="fact-box glass">
+            <i data-lucide="graduation-cap" class="icon" aria-hidden="true"></i>
+            <h3>Early Interest</h3>
+            <p>Girls show equal interest in STEM subjects as boys in elementary school, but lose interest by middle
+              school due to social pressures.</p>
+          </div>
+
+          <div class="fact-box glass">
+            <i data-lucide="users" class="icon" aria-hidden="true"></i>
+            <h3>Role Models Matter</h3>
+            <p>Having female role models in CS significantly increases girls' interest in pursuing computer science
+              careers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
