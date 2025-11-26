@@ -13,12 +13,12 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a href="#representation" class="nav-link">Representation</a>
       <a href="#stereotypes" class="nav-link">Stereotypes</a>
-      <a href="#impact" class="nav-link">Impact</a>
-      <a href="#stats" class="nav-link">Stats</a>
+      <a href="#stats" class="nav-link">Statistics</a>
       <a href="#google" class="nav-link">Search Bias</a>
       <a href="#ai" class="nav-link">AI Bias</a>
+      <a href="#timeline" class="nav-link">Timeline</a>
+      <a href="#female-impact" class="nav-link">Female Impact</a>
 
     </nav>
   </header>
@@ -33,7 +33,7 @@
     </section>
 
     <!-- Section 1 (odd → pink, text left image right) -->
-    <section id="representation" class="text-section odd-section">
+    <section id="stereotypes" class="text-section odd-section">
       <div class="text-col">
         <h2>What is a Computer Scientist?</h2>
         <p>When picturing a computer scientist, many imagine a stereotypical "geek" or "nerd" often portrayed in media.
@@ -50,7 +50,7 @@
     </section>
 
     <!-- Section 2 (even → white, image left text right) -->
-    <section id="stereotypes" class="text-section even-section">
+    <section class="text-section even-section">
       <div class="img-col">
         <img src="geek_girl.png" alt="Stereotypical geek girl" class="img-placeholder">
         <p class="img-note">Mia from The Princess Diaries as an example of a shy, geeky girl. She later gets a makeover
@@ -69,7 +69,7 @@
     </section>
 
     <!-- Section 3 (odd → pink, text left image right) -->
-    <section id="impact" class="text-section odd-section">
+    <section class="text-section odd-section">
       <div class="text-col">
         <h2>Does it Even Matter?</h2>
         <p>When immersed in a male dominated environment, attention is inevitable.
@@ -108,6 +108,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- Image Grid Section -->
     <section id="google" class="image-grid-section">
@@ -181,8 +182,80 @@
       </div>
     </section>
 
+    <!-- Timeline Section (women contributions) -->
+    <section id="timeline" class="timeline-section">
+      <h2>Women Who Shaped Computer Science</h2>
+      <p class="timeline-sub">A brief timeline highlighting some key contributions women have made to the foundations of computing.</p>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <div class="timeline-date"><time datetime="1843">1843</time></div>
+          <div class="timeline-dot"><i data-lucide="hash" class="timeline-icon" aria-hidden="true"></i></div>
+          <div class="timeline-content">
+            <h3>Ada Lovelace</h3>
+            <p>Often considered the first computer programmer for her notes and algorithm for Charles Babbage’s Analytical Engine.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date"><time datetime="1942">1942</time></div>
+          <div class="timeline-dot"><i data-lucide="wifi" class="timeline-icon" aria-hidden="true"></i></div>
+          <div class="timeline-content">
+            <h3>Hedy Lamarr</h3>
+            <p>Co-invented frequency-hopping spread spectrum, a foundation of modern secure wireless communications (Wi‑Fi, Bluetooth).</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date"><time datetime="1952">1952–1959</time></div>
+          <div class="timeline-dot"><i data-lucide="code" class="timeline-icon" aria-hidden="true"></i></div>
+          <div class="timeline-content">
+            <h3>Grace Hopper</h3>
+            <p>Developed early compilers and played a major role in designing COBOL, opening programming to higher-level languages.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date"><time datetime="1962">1962–1969</time></div>
+          <div class="timeline-dot"><i data-lucide="rocket" class="timeline-icon" aria-hidden="true"></i></div>
+          <div class="timeline-content">
+            <h3>Katherine Johnson &amp; Margaret Hamilton</h3>
+            <p>Johnson calculated orbital trajectories for NASA missions; Hamilton led the development of Apollo flight software and advocated for rigorous engineering of software systems.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date"><time datetime="1985">1985</time></div>
+          <div class="timeline-dot"><i data-lucide="server" class="timeline-icon" aria-hidden="true"></i></div>
+          <div class="timeline-content">
+            <h3>Radia Perlman</h3>
+            <p>Invented the Spanning Tree Protocol (STP), enabling resilient network topologies and making modern LANs practical.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date"><time datetime="1970">1970s–1980s</time></div>
+          <div class="timeline-dot"><i data-lucide="layers" class="timeline-icon" aria-hidden="true"></i></div>
+          <div class="timeline-content">
+            <h3>Barbara Liskov</h3>
+            <p>Contributed to programming language design (CLU) and formalized programming principles such as the Liskov Substitution Principle.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date"><time datetime="2006">2006</time></div>
+          <div class="timeline-dot"><i data-lucide="award" class="timeline-icon" aria-hidden="true"></i></div>
+          <div class="timeline-content">
+            <h3>Frances E. Allen</h3>
+            <p>Recognized for pioneering work on program optimization and compilation techniques; awarded the Turing Award (2006).</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date"><time datetime="2012">2012</time></div>
+          <div class="timeline-dot"><i data-lucide="shield" class="timeline-icon" aria-hidden="true"></i></div>
+          <div class="timeline-content">
+            <h3>Shafi Goldwasser</h3>
+            <p>Major contributions to cryptography and zero-knowledge proofs; foundational work that shaped modern secure protocols.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
     <!-- Did You Know Section -->
-    <section class="didyouknow-section">
+    <section class="didyouknow-section" id="female-impact">
       <div class="didyouknow-inner">
         <h2>Computer Science Needs Women!</h2>
         <div class="didyouknow-grid">

@@ -67,6 +67,24 @@ document.addEventListener('DOMContentLoaded', () => {
     link.classList.add('active');
     link.setAttribute('aria-current', 'true');
   }));
+
+  // Timeline reveal & connector line animation
+  const timelineList = document.querySelector('.timeline-list');
+  const timelineSection = document.querySelector('#timeline');
+  if (timelineList && timelineSection && 'IntersectionObserver' in window) {
+    const timelineItems = Array.from(timelineList.querySelectorAll('.timeline-item'));
+    const tlObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          timelineList.classList.add('in-view');
+          // stagger reveal of items
+          timelineItems.forEach((el, idx) => setTimeout(() => el.classList.add('in-view'), idx * 150));
+          obs.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: `-${headerHeight + 8}px 0px -30% 0px`, threshold: 0.12 });
+    tlObserver.observe(timelineSection);
+  }
 });
 
 /* Optionally export functions or any needed API in future */
