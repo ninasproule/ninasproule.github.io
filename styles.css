@@ -45,7 +45,7 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('hero_bg.jpg') center/cover no-repeat;
+  background: url('images/hero_bg.jpg') center/cover no-repeat;
   filter: blur(4px) brightness(0.85);
   transform: scale(1.1);
 }
