@@ -126,6 +126,11 @@ margin: 4rem 2rem 1rem;
   color: var(--text-navy);
 }
 
+.statistics-section h2 {
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
 .statistics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -146,6 +151,7 @@ margin: 4rem 2rem 1rem;
 .stat-box:hover {
   transform: translateY(-4px);
 }
+
 
 .stat-box h3 {
   font-size: 1.5rem;
@@ -194,7 +200,7 @@ margin: 4rem 2rem 1rem;
 
 .text-col p {
   line-height: 1.6;
-  font-size: 1.125rem; /* slightly larger paragraph font for improved readability */
+  font-size: 1.25rem; /* slightly larger paragraph font for improved readability */
 }
 
 .img-col {
